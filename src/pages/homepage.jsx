@@ -10,6 +10,7 @@ import Settings from './settings.jsx';
 import BottomNavigationBar from '../components/bottomNavigationBar.jsx';
 import NotFoundPage from './notFoundPage.jsx';
 import ForgotPassword from './forgotPassword.jsx';
+import LandingPage from './landingPage.jsx';
 
 
 export function HomePage(){
@@ -19,7 +20,7 @@ export function HomePage(){
             <div className=' flex w-full h-full overflow-y-scroll'>
                 <Routes>
                     <Route path='/products' element={<ProductsPage/>} />
-                    <Route path='/' element={<h1>Wfkanje!</h1>} />
+                    <Route path='/' element={<LandingPage/>} />
                     <Route path='/contact-us' element={<h1>987987!</h1>} />
                     <Route path='/overview/:productId' element={<ProductOverViewPage/>}/>
                     <Route path='/cart' element={<CartPage></CartPage>}></Route>
