@@ -13,7 +13,7 @@ export default function CheckoutPage(){
     
 
     return(
-        <div className="flex flex-col gap-5 items-center pb-36 p-3.5 w-full h-full">
+        <div className="flex flex-col gap-5 items-center pb-20 p-3.5 w-full min-h-screen">
             {cart.map((item , index)=>{
                 return(
                 <div className="h-40 w-full lg:w-lg bg-white rounded-2xl shadow-2xl p-2.5 flex relative" key={item.product.productId}>
@@ -29,7 +29,7 @@ export default function CheckoutPage(){
                         <h1 className="font-semibold text-accent text-[20px]">{getPrice(item.product.price)}</h1>
                     </div>
                     <div className="absolute flex right-2  h-full w-40 justify-end items-end flex-col p-4">
-                        <div className="border-2 border-black p-1 rounded-2xl justify-between  flex items-center">
+                        <div className="border border-black p-1 rounded-2xl justify-between  flex items-center">
                             <button onClick={()=>{
                                 const newCart = [...cart]
                                 newCart[index].quantity -= 1
@@ -46,7 +46,7 @@ export default function CheckoutPage(){
                             }}>+</button>
                             
                         </div>
-                            <h1>{getPrice(item.quantity*item.product.price)}</h1>
+                            <h1 className="text-[12px] lg:text-[15px]">{getPrice(item.quantity*item.product.price)}</h1>
                     </div>
                     
                 </div>
@@ -55,7 +55,7 @@ export default function CheckoutPage(){
             })
             }
 
-            <div className="w-9/10 lg:w-lg p-2.5 rounded-t-lg flex bg-white border-accent border-2 fixed bottom-20 lg:bottom-0 justify-between">
+            <div className="w-9/10 lg:w-lg p-2.5 rounded-t-lg flex bg-white border-accent border-2 fixed bottom-18 lg:bottom-0 justify-between">
                 <CreateOrderModel cart={cart}></CreateOrderModel>
                 <h1 className="text-2xl text-accent font-semibold">{getPrice(getTotal(cart))}</h1>
             </div>

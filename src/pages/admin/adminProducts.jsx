@@ -5,6 +5,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import LoadingAnimation from "../../components/loadingAnimation";
 import ProductDeleteModel from "../../components/productDeleteModal";
+import { FaEdit } from "react-icons/fa";
 
 
 export default function AdminProductsPage(){
@@ -60,7 +61,7 @@ export default function AdminProductsPage(){
             {
                 products.map((product)=>{
                     return (
-                        <tr key={product.productId} className="odd:bg-blue-400 even:bg-blue-300 border-t-4 border-amber-50 hover:bg-accent hover:text-amber-50">
+                        <tr key={product.productId} className="odd:bg-gray-100 even:bg-gray-300 border-t-4 border-amber-50 hover:bg-accent hover:text-amber-50">
                             <td className="p-4 text-center"><img alt="Error loading" src={product.images[0]} className="w-20 h-20 p-1 rounded-full border-2 border-white"></img></td>
                             <td className="p-4 text-center">{product.productId}</td>
                             <td className="p-4 text-center">{product.name}</td>
@@ -77,7 +78,7 @@ export default function AdminProductsPage(){
                                     }
                                 }/>
                                <Link to={"/admin/editproduct"} state={product}>
-                                <button className="block bg-green-400 hover:bg-green-950 text-amber-50 p-1 mt-1 w-20 rounded-[10px]">Edit</button>
+                                <button className="flex bg-green-400 hover:bg-green-950 text-white p-2  items-center justify-center mt-1 w-20 rounded-[10px]"><FaEdit /></button>
                                 </Link>
                             </td>
                         </tr>
@@ -90,7 +91,7 @@ export default function AdminProductsPage(){
             <LoadingAnimation/>
             }
             
-            <Link to='/admin/addProducts' className="fixed bottom-8 right-8 bg-accent text-amber-50 text-5xl rounded-xl p-1.5 hover:bg-blue-950 hover:text-amber-100 hover:animate-[spin_0.6s_ease-in-out_1] border-2 border-amber-50" ><FaPlus /></Link>
+            <Link to='/admin/addProducts' className="fixed bottom-8 right-8 bg-accent text-white text-3xl rounded-full p-3.5 hover:bg-secondary hover:text-amber-100  border-2 border-amber-50" ><FaPlus /></Link>
        </div> 
     )
     

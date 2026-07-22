@@ -137,19 +137,22 @@ export default function AdminAddProducts(){
                         value={category}
                         onChange={(e)=>{setCategory(e.target.value)
                         }} >
-                            <option value="Digital Printing">Digital Printing</option>
-                            <option value="Mug Printing">Mug Printing</option>
-                            <option value="Offset Printing">Offset Printing</option>
-                            <option value="Large Format Printing">Large Format Printing</option>
-                            <option value="Screen Printing">Screen Printing</option>
-                            <option value="Sublimation Printing">Sublimation Printing</option>
-                            <option value="Sticker Printing">Sticker Printing</option>
-                            <option value="Business Cards">Business Cards</option>
-                            <option value="Flyers">Flyers</option>
-                            <option value="Banners">Banners</option>
-                            <option value="Posters">Posters</option>
-                            <option value="Brochures">Brochures</option>
-                            <option value="Custom Orders">Custom Orders</option>
+                            <option value="Processors (CPU)">Processors (CPU)</option>
+                            <option value="Graphics Cards (GPU)">Graphics Cards (GPU)</option>
+                            <option value="Motherboards">Motherboards</option>
+                            <option value="RAM / Memory">RAM / Memory</option>
+                            <option value="Storage (SSD/HDD)">Storage (SSD/HDD)</option>
+                            <option value="Power Supplies (PSU)">Power Supplies (PSU)</option>
+                            <option value="Cases">Cases</option>
+                            <option value="Cooling Systems">Cooling Systems</option>
+                            <option value="Monitors">Monitors</option>
+                            <option value="Keyboards">Keyboards</option>
+                            <option value="Mice">Mice</option>
+                            <option value="Headsets & Speakers">Headsets & Speakers</option>
+                            <option value="Networking Equipment">Networking Equipment</option>
+                            <option value="Laptops">Laptops</option>
+                            <option value="Prebuilt PCs">Prebuilt PCs</option>
+                            <option value="Accessories & Cables">Accessories & Cables</option>
                             
                     </select>
                 </div>
@@ -178,21 +181,22 @@ export default function AdminAddProducts(){
                         value={brand}
                         onChange={(e)=>{setBrand(e.target.value)
                         }} >
-                            <option value="HP">HP</option>
-                            <option value="Canon">Canon</option>
-                            <option value="Epson">Epson</option>
-                            <option value="Brother">Brother</option>
-                            <option value="Ricoh">Ricoh</option>
-                            <option value="Xerox">Xerox</option>
-                            <option value="Kyocera">Kyocera</option>
-                            <option value="Konica Minolta">Konica Minolta</option>
-                            <option value="Lexmark">Lexmark</option>
-                            <option value="Roland">Roland</option>
-                            <option value="Mimaki">Mimaki</option>
-                            <option value="Durst">Durst</option>
-                            <option value="Agfa">Agfa</option>
-                            <option value="Fujifilm">Fujifilm</option>
-                            <option value="OKI">OKI</option>
+                            <option value="Intel">Intel</option>
+                            <option value="AMD">AMD</option>
+                            <option value="NVIDIA">NVIDIA</option>
+                            <option value="ASUS">ASUS</option>
+                            <option value="MSI">MSI</option>
+                            <option value="Gigabyte">Gigabyte</option>
+                            <option value="ASRock">ASRock</option>
+                            <option value="Corsair">Corsair</option>
+                            <option value="Kingston">Kingston</option>
+                            <option value="Samsung">Samsung</option>
+                            <option value="Western Digital">Western Digital</option>
+                            <option value="Seagate">Seagate</option>
+                            <option value="Cooler Master">Cooler Master</option>
+                            <option value="NZXT">NZXT</option>
+                            <option value="Logitech">Logitech</option>
+                            <option value="Razer">Razer</option>
                             
 
                     </select>

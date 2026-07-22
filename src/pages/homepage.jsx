@@ -11,6 +11,7 @@ import BottomNavigationBar from '../components/bottomNavigationBar.jsx';
 import NotFoundPage from './notFoundPage.jsx';
 import ForgotPassword from './forgotPassword.jsx';
 import LandingPage from './landingPage.jsx';
+import ContactUs from './contactUs.jsx';
 
 
 export function HomePage(){
@@ -21,7 +22,7 @@ export function HomePage(){
                 <Routes>
                     <Route path='/products' element={<ProductsPage/>} />
                     <Route path='/' element={<LandingPage/>} />
-                    <Route path='/contact-us' element={<h1>987987!</h1>} />
+                    <Route path='/contact-us' element={<ContactUs/>} />
                     <Route path='/overview/:productId' element={<ProductOverViewPage/>}/>
                     <Route path='/cart' element={<CartPage></CartPage>}></Route>
                     <Route path='/checkout' element={<CheckoutPage></CheckoutPage>}></Route>

@@ -38,8 +38,8 @@ export default function UserData(){
                     </select>
                 </div>:
                 <div className="flex flex-col">
-                    <Link to="/login">Login</Link>
-                    <Link to="/register">Register</Link>
+                    <Link className="font-semibold hover:text-gray-400 " to="/login">Login</Link>
+                    <Link className="font-semibold hover:text-gray-400" to="/register">Register</Link>
                 </div>
             }
         </div>

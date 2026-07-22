@@ -36,9 +36,9 @@ export function ProductsPage(){
     return(
         <div className="w-full h-full flex justify-center flex-wrap ">
             <div className="w-full h-15  flex p-2.5 gap-2 justify-center">
-                <input value={query} onChange={(e)=>{setQuery(e.target.value)}} placeholder="Search" className="w-1/2 border-2 border-gray-800 rounded-sm p-1 "></input>
-                <button className="bg-accent p-1 text-white rounded-sm hover:bg-secondary" onClick={handleSearch}>Search</button>
-                <button className="bg-secondary p-1 text-white rounded-sm hover:bg-accent" onClick={()=>{setIsLoaded(false)}}>All products</button>
+                <input value={query} onChange={(e)=>{setQuery(e.target.value)}} placeholder="Search" className="w-1/2 border border-gray-300 rounded-sm p-1 "></input>
+                <button className="bg-accent px-1 lg:px-4 text-white rounded-sm hover:bg-secondary" onClick={handleSearch}>Search</button>
+                <button className="bg-secondary px-1 lg:px-4 text-white rounded-sm hover:bg-accent" onClick={()=>{setIsLoaded(false)}}>All products</button>
                 
             </div>
             {

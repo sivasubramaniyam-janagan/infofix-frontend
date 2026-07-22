@@ -19,9 +19,9 @@ export default function Header(){
             </div>
 
         <div className="h-full hidden lg:flex justify-center items-center gap-10 ">
-            <Link to="/">Home</Link>
-            <Link to="/products">Products</Link>
-            <Link to="/contact-us">Contact Us</Link>
+            <Link to="/" className="font-semibold hover:text-gray-100 hover:font-light ">Home</Link>
+            <Link to="/products" className="font-semibold hover:text-gray-100 hover:font-light ">Products</Link>
+            <Link to="/contact-us" className="font-semibold hover:text-gray-100 hover:font-light ">Contact Us</Link>
             
 
 
@@ -32,7 +32,7 @@ export default function Header(){
         </div>
 
         <div className="hidden lg:flex justify-center items-center h-full ">
-            <Link to="/cart" className="text-white absolute right-6 text-3xl"><BiCart/></Link>
+            <Link to="/cart" className="text-white absolute right-6 text-3xl hover:text-gray-300 pointer"><BiCart/></Link>
         </div>
 
             

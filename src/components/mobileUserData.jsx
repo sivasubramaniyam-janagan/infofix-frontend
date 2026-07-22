@@ -22,8 +22,8 @@ export default function MobileUserData(){
     return (
         <div className="border-2 border-accent rounded-2xl">
             {user? 
-                <div className="flex justify-center h-16 w-16  aspect-square  items-center relative">
-                    <img src={user.image} className="w-16 h-16 aspect-square  rounded-lg shadow-2xl text-accent object-cover" ></img>
+                <div className="flex justify-center h-12 w-12  aspect-square  items-center relative">
+                    <img src={user.image} className="w-12 h-12 aspect-square  rounded-lg shadow-2xl text-accent object-cover" ></img>
                     <select className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onChange={(e)=>{
                         if(e.target.value=="option2"){navigate("/settings") }
                         else if(e.target.value=="option3"){navigate("/my-orders") }
@@ -40,7 +40,7 @@ export default function MobileUserData(){
                     </select>
                 </div>:
                 <div className="flex flex-col">
-                    <Link to="/login" className="flex h-16 aspect-square justify-center items-center text-2xl  shadow-2xl rounded-2xl text-accent "><CgProfile /></Link>
+                    <Link to="/login" className="flex h-12 aspect-square justify-center items-center text-2xl  shadow-2xl rounded-2xl text-accent "><CgProfile /></Link>
                     
                 </div>
             }

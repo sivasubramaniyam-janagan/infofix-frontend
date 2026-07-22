@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme{
-    --color-primary:#CCE0FF;
-    --color-secondary:#000E24;
-    --color-accent:#0052CC;
+    --color-primary:#ffffff;
+    --color-secondary:#00032b;
+    --color-accent:#000080;
 }
 
 /* ===== Modern Scrollbar ===== */
