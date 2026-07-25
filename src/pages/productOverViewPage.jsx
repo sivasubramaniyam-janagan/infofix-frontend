@@ -29,7 +29,7 @@ export function ProductOverViewPage(){
     },[])
     
     return (
-        <div className="flex items-center justify-center h-full w-full">
+        <div className="flex items-center justify-center self-start">
             {
                 
                 status=="Loading" && <LoadingAnimation/>
@@ -49,19 +49,19 @@ export function ProductOverViewPage(){
                     </div>
                     <div className="flex w-full lg:w-[50%] h-full  ">
                         <div className="h-full w-full flex flex-col p-6">
-                            <h1 className="text-3xl font-semibold text-secondary mt-">{product.name}</h1>
-                           <h1 className="text-2xl font-semibold text-gray-500 mt-2.5">
+                            <h1 className="text-2xl lg:text-3xl font-semibold text-secondary mt-">{product.name}</h1>
+                           <h1 className=" font-semibold text-gray-500 mt-2.5">
                             {
                                 product.altNames.map((name,index)=>{
                                     return(
-                                        <span key={index}>  {name}</span>
+                                        <span key={index}>  | {name} </span>
                                     )
                                 })
                             }
                             </h1>
                             <h2 className="text-sm font-semibold text-gray-500 ">{product.productId}</h2>
                             <div className="flex flex-col mt-2.5">
-                                <h1 className="text-3xl font-semibold  text-accent">{getPrice(product.price)}</h1>
+                                <h1 className="text-2xl lg:text-3xl font-semibold  text-accent">{getPrice(product.price)}</h1>
                                 {
                                     product.labelledPrice > product.price && <h1 className="text-1xl font-semibold line-through">{getPrice(product.labelledPrice)}</h1>
                                 }
@@ -78,9 +78,9 @@ export function ProductOverViewPage(){
                                     {product.category}
                                 </h2>
                             </span>
-                            <p className="mt-2.5">{product.description}</p>
+                            <p className="mt-2.5 pb-3">{product.description}</p>
 
-                            <div className="flex gap-8 mt-3 fixed bottom-20 pb-1 bg-primary lg:static">
+                            <div className="flex gap-8 mt-3 fixed bottom-18 pb-1 bg-primary lg:static">
                                 <button className="w-36 h-10 rounded-lg bg-green-500 hover:bg-green-800 transition-colors duration-300 text-white font-semibold" 
                                     onClick={()=>{addToCart(product,1)
                                         toast.success("Added")}}>Add to cart</button>

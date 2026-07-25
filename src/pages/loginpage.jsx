@@ -55,10 +55,10 @@ export default function Login(){
 
             </div>
 
-            <div className="w-full lg:w-1/2 h-full flex items-center justify-center">
+            <div className="w-full lg:w-1/2 h-full flex items-center justify-center ">
 
                 <div className="w-11/12  lg:w-72 backdrop-blur-md shadow-black flex flex-col text-center items-center rounded-2xl p-6" >
-                    <h3 className="text-xl font-bold mb-4">Sign In</h3>
+                    <h3 className="text-xl font-bold mb-4 text-white">Sign In</h3>
                    <input 
                    onChange={
                     (e)=>{
@@ -66,20 +66,20 @@ export default function Login(){
                         setEmail(e.target.value)
                     }
                    }
-                   type="email" value={email} placeholder="Email" className="h-10 w-60 rounded-md my-2 px-2 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-500 mar" />
+                   type="email" value={email} placeholder="Email" className="h-10 w-60 rounded-md my-2 px-2 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-200 text-white" />
                    <input 
                    onChange={(e)=>{
                     
                     setPassword(e.target.value)
                    }}
-                   type="password" value={password} placeholder="Password" className="h-10 w-60 rounded-md my-2 px-2 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-500" />
+                   type="password" value={password} placeholder="Password" className="h-10 w-60  text-white rounded-md my-2 px-2 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-200" />
 
-                   <p className="text-sm text-gray-400 my-2">Forgot Password? <Link to="/forgot-password" className="text-blue-500 cursor-pointer">click here</Link></p>
+                   <p className="text-sm text-gray-100 my-2">Forgot Password? <Link to="/forgot-password" className="text-blue-500 cursor-pointer">click here</Link></p>
                    
                    <button className="bg-blue-500 text-white rounded-md h-10 w-60 my-2 hover:bg-blue-600" onClick={handleLogin}>Sign in</button>
-                    <button className="bg-white text-secondary rounded-md h-10 w-60 my-2 hover:bg-gray-500 flex justify-around items-center" onClick={googleLogin}><FcGoogle /> Sign in with Google</button>
+                    <button className="bg-white text-secondary rounded-md h-10 w-60 my-2 hover:bg-gray-200 flex justify-around items-center" onClick={googleLogin}><FcGoogle /> Sign in with Google</button>
 
-                    <p className="text-sm text-gray-400 my-2">Don't have an account?<Link to="/register"> <span className="text-blue-500 cursor-pointer">Sign Up</span></Link></p>
+                    <p className="text-sm text-gray-200 my-2">Don't have an account?<Link to="/register"> <span className="text-blue-500 cursor-pointer">Sign Up</span></Link></p>
                 </div>
 
 

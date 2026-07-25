@@ -63,7 +63,7 @@ export default function CreateOrderModel(props){
     return(
         <>
     
-        <button className="bg-accent text-white p-2.5 rounded-2xl" onClick={() => setIsModalOpen(true)}>Order now</button>
+        <button className="bg-amber-500 text-white p-2.5 rounded-2xl" onClick={() => setIsModalOpen(true)}>Order now</button>
         {
             isModalOpen && <div className="fixed left-0 top-0 flex h-screen w-screen items-center justify-center bg-black/35">
                 <div className="flex w-9/10 fixed top-4 lg:static lg:w-96 flex-col gap-5 bg-white p-5 rounded-2xl ">

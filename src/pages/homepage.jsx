@@ -16,7 +16,7 @@ import ContactUs from './contactUs.jsx';
 
 export function HomePage(){
     return (
-        <div className="bg-primary text-secondary flex flex-col w-full h-full justify-center ">
+        <div className="bg-primary text-secondary flex flex-col w-full h-full justify-center  ">
             <Header/>
             <div className=' flex w-full h-full overflow-y-scroll'>
                 <Routes>

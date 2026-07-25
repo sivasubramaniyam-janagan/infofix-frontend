@@ -1,4 +1,4 @@
-
+import { MdOutlineContactSupport } from "react-icons/md";
 import { BiCart } from "react-icons/bi"
 import { Link } from "react-router-dom"
 import UserData from "./userData"
@@ -6,16 +6,17 @@ import UserData from "./userData"
 
 export default function Header(){
     return (
-        <header className="bg-accent text-white p-4 flex w-full h-28 items-center justify-center relative">
+        <header className="bg-accent text-white p-4 flex w-full h-20 lg:h-28 items-center justify-center relative">
 
         <Link to="/">
             <div className="absolute left-9 top-0  h-full lg:w-[250px] flex items-center justify-center">
-                <img src="logo.jpg" className="h-20 rounded-full "></img>
+                <img src="logo.jpg" className="h-15 rounded-full "></img>
             </div>
         </Link>
 
          <div className="absolute right-9 top-0  h-full  flex items-center justify-center lg:hidden"> 
-                <h1 className="text-2xl font-semibold ">Infofix</h1>
+                
+                <Link to="/contact-us" className="font-semibold hover:text-gray-100 hover:font-light text-2xl"><MdOutlineContactSupport /></Link>
             </div>
 
         <div className="h-full hidden lg:flex justify-center items-center gap-10 ">

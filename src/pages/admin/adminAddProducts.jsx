@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import toast from "react-hot-toast"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import uploadMedia from "../../../utilities/mediaUpload"
 
 export default function AdminAddProducts(){
@@ -85,7 +85,7 @@ export default function AdminAddProducts(){
                 <h1 className="text-2xl font-semibold text-blue-50">Add Product</h1>
                 <div className="h-full">
                     <button onClick={handleSave} className="p-1.5 bg-emerald-500 text-amber-50 w-28 rounded-2xl  hover:bg-emerald-900" disabled={isAdding}>{isAdding ? "Saving" :"Save"}</button>
-                    <button className="p-1.5 bg-red-500 text-amber-50 w-28 rounded-2xl ml-1  hover:bg-red-950" >Cancel</button>
+                    <Link to="/admin/products"><button className="p-1.5 bg-red-500 text-amber-50 w-28 rounded-2xl ml-1  hover:bg-red-950" >Cancel</button></Link>
                 </div>
             </div>
 
@@ -153,6 +153,8 @@ export default function AdminAddProducts(){
                             <option value="Laptops">Laptops</option>
                             <option value="Prebuilt PCs">Prebuilt PCs</option>
                             <option value="Accessories & Cables">Accessories & Cables</option>
+                            <option value="Prebuild PC">Prebuild PC</option>
+                            <option value="Other">Other</option>
                             
                     </select>
                 </div>
@@ -197,7 +199,7 @@ export default function AdminAddProducts(){
                             <option value="NZXT">NZXT</option>
                             <option value="Logitech">Logitech</option>
                             <option value="Razer">Razer</option>
-                            
+                            <option value="Other">Other</option>
 
                     </select>
                 </div>

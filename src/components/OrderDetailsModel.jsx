@@ -35,12 +35,12 @@ export default function OrderDetailsModel(props){
 
     return (
         
-        <><LuEye onClick={()=>{setIsModelOpen(true)}}/>
+        <><LuEye className="text-2xl bg-accent text-white w-15 h-6 rounded-sm hover:bg-secondary " onClick={()=>{setIsModelOpen(true)}}/>
         {isModelOpen && <div className="w-full h-full fixed top-0 left-0 flex justify-center items-center bg-black/25">
             <div className="bg-amber-50 w-xl h-3/4 flex flex-col p-3.5 rounded-2xl">
-                <div className="flex w-full justify-end p-1 "><h1 className=" text-red-700" onClick={()=>{setIsModelOpen(false)}}>X</h1></div>
+                <div className="flex w-full justify-end p-1 "><h1 className=" text-red-700 hover:text-red-900 hover:font-bold" onClick={()=>{setIsModelOpen(false)}}>X</h1></div>
                 <div className="flex justify-between">
-                    <span>{order.orderId}</span>
+                    <span className="font-semibold">{order.orderId}</span>
                     <span>{order.email}</span>
                     <span>🕿 {order.phone}</span>
                 </div>
@@ -77,16 +77,16 @@ export default function OrderDetailsModel(props){
                         <span>Total : {getPrice(order.total)}</span>
                     </div>
 
-                    <div className="flex justify-between ">
+                    <div className="flex justify-between items-end">
                         
                         <div className="w-2/4 flex flex-col ">
                             <label>Edit Notes</label>
-                            <textarea className="border-2 w-full" value={notes} onChange={(e)=>{setNotes(e.target.value)}}></textarea>
+                            <textarea className="border-2 w-full rounded-sm" value={notes} onChange={(e)=>{setNotes(e.target.value)}}></textarea>
                         </div>
                         
                         <div className="w-1/4 flex flex-col ">
                             <label>Edit status</label>
-                            <select className="border-2 h-8 border-gray-600" value={status} onChange={(e)=>{setStatus(e.target.value)}}>
+                            <select className="border-2 h-8 border-gray-600 rounded-sm" value={status} onChange={(e)=>{setStatus(e.target.value)}}>
                             <option value="pending">pending</option>
                             <option value="completed">completed</option>
                             <option value="shipped">shipped</option>

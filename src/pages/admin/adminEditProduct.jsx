@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import toast from "react-hot-toast"
-import { useLocation, useNavigate } from "react-router-dom"
+import { Link, useLocation, useNavigate } from "react-router-dom"
 import uploadMedia from "../../../utilities/mediaUpload"
 
 export default function AdminEditProduct(){
@@ -96,7 +96,7 @@ export default function AdminEditProduct(){
                 <h1 className="text-2xl font-semibold text-blue-50">Edit Product</h1>
                 <div className="h-full">
                     <button onClick={handleUpdate} className="p-1.5 bg-emerald-500 text-amber-50 w-28 rounded-2xl  hover:bg-emerald-900" disabled={isUpdating} >{isUpdating ? "Updating":"Update"}</button>
-                    <button className="p-1.5 bg-red-500 text-amber-50 w-28 rounded-2xl ml-1  hover:bg-red-950" >Cancel</button>
+                    <Link to="/admin/products"><button className="p-1.5 bg-red-500 text-amber-50 w-28 rounded-2xl ml-1  hover:bg-red-950" >Cancel</button></Link>
                 </div>
             </div>
 

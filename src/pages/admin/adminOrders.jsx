@@ -13,7 +13,7 @@ export default function AdminOrdersPage(){
     const [orders,setOrders] = useState([])
     const [isLoaded,setIsLoaded] = useState(false)
     const [currentPage,setCurrentPage] = useState(1)
-    const [pagesize,setPageSize] = useState(3)
+    const [pagesize,setPageSize] = useState(5)
     const [totalPages,setTotalPages] = useState(0)
     const [totalOrders,setTotalOrders] = useState(0)
     
@@ -66,7 +66,7 @@ export default function AdminOrdersPage(){
                     <th className="p-5 text-amber-50 bg-accent border-amber-50 border">Date</th>
                     <th className="p-5 text-amber-50 bg-accent border-amber-50 border">Total</th>
                     <th className="p-5 text-amber-50 bg-accent border-amber-50 border">Pending</th>
-                     <th className="p-5 text-amber-50 bg-accent border-amber-50 border">Action</th>
+                    <th className="p-5 text-amber-50 bg-accent border-amber-50 border">Action</th>
                     
                 </tr>
             </thead>
@@ -74,7 +74,7 @@ export default function AdminOrdersPage(){
             {
                 orders.map((order)=>{
                     return (
-                        <tr key={order.orderId} className="odd:bg-blue-400 even:bg-blue-300 border-t-4 border-amber-50">
+                        <tr key={order.orderId} className="odd:bg-gray-100 even:bg-gray-300 border-t-4 border-amber-50">
                             
                             <td className="p-4 text-center">{order.orderId}</td>
                             <td className="p-4 text-center">{order.email}</td>
@@ -84,7 +84,7 @@ export default function AdminOrdersPage(){
                             <td className="p-4 text-center">{order.date.slice(0, 10) }</td>
                             <td className="p-4 text-center">{order.total}</td>
                             <td className="p-4 text-center">{order.status}</td>
-                            <td className="p-4 cursor-pointer flex justify-center">{<OrderDetailsModel refresh={()=>{setIsLoaded(false)}} order={order}/>}</td>
+                            <td className="p-4 cursor-pointer flex justify-center ">{<OrderDetailsModel refresh={()=>{setIsLoaded(false)}} order={order}/>}</td>
                             
                         </tr>
                     )
