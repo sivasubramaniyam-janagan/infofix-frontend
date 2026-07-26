@@ -9,6 +9,7 @@ import api from "../../utilities/api"
 export default function Login(){
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
+    const [isclicked,setISclicked] = useState(false)
     const navigateTo = useNavigate()
     const googleLogin = useGoogleLogin({
         onSuccess:(response)=>{
@@ -28,6 +29,7 @@ export default function Login(){
     })
 
     function handleLogin(){
+        setISclicked(true)
         axios.post(import.meta.env.VITE_API_URL+"/users/login",{
             email:email,
             password:password
@@ -46,7 +48,8 @@ export default function Login(){
 
         }).catch((err)=>{
             toast.error(err.response.data.message)
-        })
+        }).finally(()=>{setISclicked(false)})
+        
     }
 
     return (
@@ -76,16 +79,12 @@ export default function Login(){
 
                    <p className="text-sm text-gray-100 my-2">Forgot Password? <Link to="/forgot-password" className="text-blue-500 cursor-pointer">click here</Link></p>
                    
-                   <button className="bg-blue-500 text-white rounded-md h-10 w-60 my-2 hover:bg-blue-600" onClick={handleLogin}>Sign in</button>
+                   <button className={`${isclicked ? "bg-blue-600" : "bg-blue-500"} text-white rounded-md h-10 w-60 my-2 hover:bg-blue-600`} onClick={handleLogin} disabled={isclicked}>Sign in</button>
                     <button className="bg-white text-secondary rounded-md h-10 w-60 my-2 hover:bg-gray-200 flex justify-around items-center" onClick={googleLogin}><FcGoogle /> Sign in with Google</button>
 
                     <p className="text-sm text-gray-200 my-2">Don't have an account?<Link to="/register"> <span className="text-blue-500 cursor-pointer">Sign Up</span></Link></p>
                 </div>
-
-
             </div>
-
-
         </div>
 
 
